@@ -17,9 +17,9 @@ class ListOfKeyWords{
     ImagePath().rainWeather3,
   ];
   final List<String> mistimageState = [
-    ImagePath().clearWeather2,
-    ImagePath().clearWeather2,
-    ImagePath().clearWeather2,
+    ImagePath().mistWeather2,
+    ImagePath().mistWeather1,
+    ImagePath().clearWeather1,
   ];
   // this state appear when night of state weather and sunny in morning
   final List<String> clearimageState = [

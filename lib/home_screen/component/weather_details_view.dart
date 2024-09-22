@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:math';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -38,7 +37,7 @@ class _WeatherDetailsViewState extends State<WeatherDetailsView>
     _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(_controller);
 
     // Start the timer to change images every 3 seconds
-    _timer = Timer.periodic(const Duration(seconds: 4), (Timer timer) {
+    _timer = Timer.periodic(const Duration(seconds: 3), (Timer timer) {
       setState(() {
         _currentIndex =
             (_currentIndex + 1) % ListOfKeyWords().sunnyimageState.length;
@@ -58,7 +57,7 @@ class _WeatherDetailsViewState extends State<WeatherDetailsView>
 
   @override
   Widget build(BuildContext context) {
-    String image = ImagePath().loadingImage;
+    String image = ImagePath().searchImage;
     WeatherAppModel? weatherAppData =
         BlocProvider.of<GetWeatherCubit>(context).weatherAppModel;
     // conditions of Weather State
@@ -83,7 +82,7 @@ class _WeatherDetailsViewState extends State<WeatherDetailsView>
     return FadeTransition(
       opacity: _fadeAnimation,
       child: Container(
-        height: 320,
+        height: 350,
         width: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(

@@ -3,7 +3,7 @@ class ImagePath {
   String iconWelcomeScreen = "assets/images/welcome_screen_image/28665-NXASB3.png";
   String humidityIcon = "assets/images/icons/humidity.png";
   String windIcon = "assets/images/icons/wind.png";
-  String errorImage = "assets/images/app state/Oops! 404 Error with a broken robot-rafiki.png";
+  String errorImage = "assets/images/app state/hand-drawn-no-data-illustration.png";
   String searchImage = "assets/images/app state/Search engines-pana.png";
   // sunny Weather
   String sunnyWeather1 = "assets/images/weather state/2461161.jpg";
@@ -21,6 +21,9 @@ class ImagePath {
   String snowWeather1 = "assets/images/weather state/family-family-christmas-vacation-woman-little-girl-forest-people-walks.jpg";
   String snowWeather2 = "assets/images/weather state/pexels-einfoto-2090972.jpg";
   String snowWeather3 = "assets/images/weather state/pexels-enricoperini-941736.jpg";
-  
+  // mist
+  String mistWeather1 = "assets/images/weather state/Screenshot_20240922_133940_YouTube.jpg";
+  String mistWeather2 = "assets/images/weather state/blue-sky-fluffy-clouds.jpg";
+
   String loadingImage = "assets/images/app state/—Pngtree—not loaded during loading_6083139.png";
 }

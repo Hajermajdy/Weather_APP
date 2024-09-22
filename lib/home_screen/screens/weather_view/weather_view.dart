@@ -15,6 +15,7 @@ class WeatherView extends StatelessWidget {
     WeatherAppModel? weatherAppData =
         BlocProvider.of<GetWeatherCubit>(context).weatherAppModel;
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const LocationBar(),
         const SizedBox(
@@ -22,7 +23,7 @@ class WeatherView extends StatelessWidget {
         ),
         const WeatherDetailsView(),
         const SizedBox(
-          height: 20,
+          height: 30,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

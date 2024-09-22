@@ -33,6 +33,7 @@ class KeyWord {
     "Mist",
   ];
   List<String> rainConditions = [
+    "Patchy rain nearby",
     "Patchy rain possible",
     "Patchy light rain",
     "Light rain",

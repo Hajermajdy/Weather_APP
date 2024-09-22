@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_offline/flutter_offline.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 import 'package:weather_app/Cubits/get_weather_cubit/get_weather_cubit.dart';
 import 'package:weather_app/Cubits/get_weather_cubit/get_weather_state.dart';
@@ -10,12 +11,12 @@ import 'package:weather_app/home_screen/screens/weather_view/weather_view.dart';
 import 'package:weather_app/home_screen/screens/no_weather/no_weather.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
+  HomeScreen({super.key});
+  late bool connected;
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
@@ -35,7 +36,7 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const ButtonSearch(),
-            // integrate cubit 
+            // integrate cubit
             BlocBuilder<GetWeatherCubit, WeatherAppState>(
               builder: (context, state) {
                 if (state is Noweather) {
